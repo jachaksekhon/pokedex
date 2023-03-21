@@ -1,0 +1,9 @@
+.pokecard {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    border: solid;
+    border-radius: 30px;
+    
+}
