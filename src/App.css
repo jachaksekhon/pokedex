@@ -10,20 +10,8 @@
   align-items: center;
 }
 
-.app__left > .pages {
-  justify-content: space-around;
-}
-
-.app__left > .pages > .previous {
-  margin-right: 20px;
-  color: blueviolet;
-  background-color: aquamarine;
-}
-
-.app__left > .pages > .next {
-  margin-left: 20px;
-  color: blueviolet;
-  background-color: aquamarine;
+.app__left > .buttons {
+  display: flex;
 }
 
 .app__right {

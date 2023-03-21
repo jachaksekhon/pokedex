@@ -9,9 +9,9 @@ function App() {
 
       <div className="app__left">
         <Pokelist />
-        <div className="pages">
-          <button className = "previous">Prev</button>
-          <button className = "next">Next</button>
+        <div className="buttons">
+          <button>Prev</button>
+          <button>Next</button>
         </div>
         
       </div>
