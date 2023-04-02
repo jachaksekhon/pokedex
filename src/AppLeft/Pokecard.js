@@ -1,15 +1,37 @@
 import React from 'react'
 import "./Pokecard.css"
 
-function Pokecard() {
+function Pokecard({pokemon, loading}) {
+  // console.log(pokemon);
+
+  function addZero ({number}) {
+    if (number < 100) return "#0" + number;
+    else return "#" + number;
+  };
+
   return (
-    <div className = "pokecard">
-
-      <h2>#001</h2>
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="" />
-      <h2>Bulbasaur</h2>
-
-    </div>
+    <>
+      {
+        loading ? <h1>Loading PokeData...</h1> :
+          pokemon.map((item) => {
+            return(
+              <>
+                <div className = "pokecard">
+                    <h2>
+                      <>
+                        {item.id}
+                      </>
+                    </h2>
+                    <img src={item.sprites.front_default} alt="" />
+                    <h2>{item.name}</h2>
+                </div>
+              </>
+            )
+          })
+      }
+      
+    </>
+    
   )
 }
 
